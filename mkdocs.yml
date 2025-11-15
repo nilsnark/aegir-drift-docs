@@ -1,0 +1,105 @@
+site_name: Aegir Drift Documentation
+site_description: "Design documents for the Aegir Drift simulation engine and its Contexts."
+site_url: ""
+repo_name: aegir-drift/aegir-drift-docs
+repo_url: https://github.com/aegir-drift/aegir-drift-docs
+
+theme:
+  name: material
+  features:
+    - navigation.section
+    - navigation.tabs
+    - navigation.expand
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+    - navigation.top
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: cyan
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+  - tables
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.betterem
+  - pymdownx.tasklist
+
+plugins:
+  - search
+  - literate-nav
+  - section-index
+  # - exporter:
+  #     formats:
+  #       pdf:
+  #         enabled: true
+  #         aggregator:
+  #           enabled: true
+  #           output: pdf/full-documentation.pdf
+
+nav:
+  - Home: index.md
+  - Overview:
+      - Vision: overview/vision.md
+      - Design Principles: overview/design-principles.md
+      - Architecture: overview/architecture.md
+      - Roadmap: reference/roadmap.md
+  - Engine:
+      - Engine Overview: engine/overview.md
+      - Simulation Overview: engine/simulation-overview.md
+      - Dimensions: 
+        - Dimensions Overview: engine/dimensions/overview.md
+        - Types: engine/dimensions/types.md
+        - Scheduling: engine/dimensions/scheduling.md
+        - Transitions: engine/dimensions/transitions.md
+      - Systems: engine/systems.md
+      - Multiplayer: engine/multiplayer.md
+      - Modding Contexts: engine/modding-contexts.md
+      - Scripting Runtime: engine/scripting-runtime.md
+  - Contexts:
+      - Contexts Overview: contexts/overview.md
+      - Fold:
+          - About Fold: contexts/fold/index.md
+          - Spacetime Stack:
+              - Overview: contexts/fold/spacetime-stack.md
+          - Economy & Culture:
+              - Overview: contexts/fold/economy-and-culture.md
+          - SLISP:
+              - Overview: contexts/fold/slisp.md
+              - SLISP Specification: contexts/fold/specs/slisp-spec.md
+          - Lore:
+              - The Common Lisp Fragment: contexts/fold/lore/common-lisp-fragment.md
+              - Cosmology: contexts/fold/lore/cosmology.md
+              - Civilization Timeline: contexts/fold/lore/civilization-timeline.md
+          - Specs:
+              - Context Manifest Schema: contexts/fold/specs/context-manifest.md
+              - Foldstone Capacity Model: contexts/fold/specs/foldstone-capacity.md
+              - Wormhole Protocols: contexts/fold/specs/wormhole-protocol.md
+  - Interfaces:
+    - Interfaces Overview: interfaces/overview.md
+    - Terminal Interface: interfaces/terminal.md
+  - Protocols:
+      - Pocket Time & Stasis Protocols: protocols/pockets-and-time.md
+  - Reference:
+    - Glossary: reference/glossary.md
+    - Ideas & Open Questions: reference/ideas-and-open-questions.md
+    - Project Roadmap (Appendix): reference/roadmap.md
+  - Legal:
+    - License: legal/license.md
+    - Trademark Policy: legal/trademark.md
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/aegir-drift/aegir-drift-docs
+copyright:
+  © Aegir Drift Project — See License and Trademark for details.
