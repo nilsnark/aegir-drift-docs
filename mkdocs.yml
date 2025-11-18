@@ -57,7 +57,9 @@ nav:
   - Overview:
       - Vision: overview/vision.md
       - Design Principles: overview/design-principles.md
-      - Architecture: overview/architecture.md
+      - Architecture: 
+        - architecture/overview.md
+        - architecture/dimensions.md
       - Roadmap: reference/roadmap.md
   - Engine:
       - Engine Overview: engine/overview.md
