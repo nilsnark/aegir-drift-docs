@@ -14,4 +14,3 @@ Each layer is represented as a **dimension** with its own simulation time-step a
 Physics is strictly Newtonian unless extended by a Context. Relativistic effects are modeled at high velocities or deep gravity wells.
 
 All simulation runs deterministically, enabling lockstep multiplayer.
-

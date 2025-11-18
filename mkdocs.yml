@@ -24,8 +24,6 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
-extra_css:
-  - css/colors.css
 
 markdown_extensions:
   - admonition
@@ -63,7 +61,11 @@ nav:
       - Roadmap: reference/roadmap.md
   - Engine:
       - Engine Overview: engine/overview.md
-      - Simulation Overview: engine/simulation-overview.md
+      - Simulation:
+        - Overview: engine/simulation/overview.md
+        - Time Model: engine/simulation/time-model.md
+        - Persistence: engine/simulation/persistence.md
+        - Scheduling: engine/simulation/scheduling.md
       - Dimensions: 
         - Dimensions Overview: engine/dimensions/overview.md
         - Types: engine/dimensions/types.md
@@ -94,6 +96,7 @@ nav:
               - Wormhole Protocols: contexts/fold/specs/wormhole-protocol.md
   - Interfaces:
     - Interfaces Overview: interfaces/overview.md
+    - Timekeeping Architecture: interfaces/timekeeping-architecture.md
     - Terminal Interface: interfaces/terminal.md
   - Protocols:
       - Pocket Time & Stasis Protocols: protocols/pockets-and-time.md
