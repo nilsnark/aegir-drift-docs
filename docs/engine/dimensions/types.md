@@ -2,32 +2,18 @@
 
 The baseline engine defines several canonical dimension types. Contexts can extend this set.
 
-## Interior Dimensions
+Each dimension type represents a different coordinate chart on the same underlying phase space, with its own reference frame, physics model, and handoff protocols. For detailed information about each dimension type, see the individual dimension pages linked below.
 
-- **Scale:** Ship interiors, small stations, enclosed spaces.
-- **Physics:** Full rigid-body physics, collisions, detailed interactions.
-- **Use Cases:** Player movement, ship rooms, machinery, local effects.
-- **Tick Rate:** High (e.g., 50–200 Hz), prioritized when players are present.
+## Interstellar Dimensions
 
-Interior dimensions often sit “inside” a local or orbital dimension; they share overall reference frame but use their own local coordinates.
+- **Scale:** Motion of stars and star systems within a galaxy, or between systems.
+- **Physics:** Approximate orbits around the galactic center, very large time-steps, mostly for positional context.
+- **Use Cases:** Strategic view, seedship trajectories, wormhole network layout.
+- **Tick Rate:** Very low (seconds to minutes per tick), can be paused when not needed.
 
-## Local Dimensions
+Interstellar dimensions provide the big-picture structure the rest of the sim sits inside.
 
-- **Scale:** Planet surfaces, station exteriors, ground bases.
-- **Physics:** Gravity, terrain interaction, atmosphere, local rigid-bodies.
-- **Use Cases:** Landed ships, rovers, bases, surface construction.
-- **Tick Rate:** Medium–high depending on activity.
-
-Local dimensions may be tiled or streamed internally, but from the engine’s perspective they are a single coherent dimension per surface region.
-
-## Orbital Dimensions
-
-- **Scale:** Low orbit around a planet or station.
-- **Physics:** rigid-body motion in a gravity well, simplified atmosphere drag, docking.
-- **Use Cases:** Orbital maneuvers, rendezvous, docking, debris fields.
-- **Tick Rate:** Medium (e.g., 20–60 Hz), good balance between accuracy and cost.
-
-Orbital dimensions serve as the “KSP layer” for near-body navigation.
+**[Read more: Interstellar Dimension →](interstellar.md)**
 
 ## Interplanetary Dimensions
 
@@ -38,14 +24,40 @@ Orbital dimensions serve as the “KSP layer” for near-body navigation.
 
 These dimensions track large-scale motion without simulating fine-grained collisions.
 
-## Interstellar Dimensions
+**[Read more: Interplanetary Dimension →](interplanetary.md)**
 
-- **Scale:** Motion of stars and star systems within a galaxy, or between systems.
-- **Physics:** Approximate orbits around the galactic center, very large time-steps, mostly for positional context.
-- **Use Cases:** Strategic view, seedship trajectories, wormhole network layout.
-- **Tick Rate:** Very low (seconds to minutes per tick), can be paused when not needed.
+## Orbital Dimensions
 
-Interstellar dimensions provide the big-picture structure the rest of the sim sits inside.
+- **Scale:** Low orbit around a planet or station.
+- **Physics:** Rigid-body motion in a gravity well, simplified atmosphere drag, docking.
+- **Use Cases:** Orbital maneuvers, rendezvous, docking, debris fields.
+- **Tick Rate:** Medium (e.g., 20–60 Hz), good balance between accuracy and cost.
+
+Orbital dimensions serve as the "KSP layer" for near-body navigation.
+
+**[Read more: Orbit Dimension →](orbit.md)**
+
+## Surface Dimensions
+
+- **Scale:** Planet surfaces, station exteriors, ground bases.
+- **Physics:** Gravity, terrain interaction, atmosphere, local rigid-bodies.
+- **Use Cases:** Landed ships, rovers, bases, surface construction.
+- **Tick Rate:** Medium–high depending on activity.
+
+Surface dimensions may be tiled or streamed internally, but from the engine's perspective they are a single coherent dimension per surface region.
+
+**[Read more: Surface Dimension →](surface.md)**
+
+## Interior Dimensions
+
+- **Scale:** Ship interiors, small stations, enclosed spaces.
+- **Physics:** Full rigid-body physics, collisions, detailed interactions.
+- **Use Cases:** Player movement, ship rooms, machinery, local effects.
+- **Tick Rate:** High (e.g., 50–200 Hz), prioritized when players are present.
+
+Interior dimensions often sit "inside" a surface or orbital dimension; they share overall reference frame but use their own local coordinates.
+
+**[Read more: Interior Dimension →](interior.md)**
 
 ## Custom Dimensions via Contexts
 
