@@ -76,7 +76,7 @@ Each dimension type corresponds to a different **coordinate chart** on the same 
 
 - **Coordinate origin**: Where (0, 0, 0) is defined.
 - **Coordinate scale**: What units represent (meters, kilometers, AU).
-- **Time scale**: How large a simulation timestep is.
+- **Time scale**: How large a simulation time-step is.
 - **Physics fidelity**: Which forces and interactions are modeled.
 
 But all charts describe the same physical reality. An entity moving from orbit to surface doesn't change its fundamental phase state—it simply has that state **re-expressed** in a new coordinate system.
@@ -131,9 +131,9 @@ Each dimension type uses a physics integrator tuned for its scale and fidelity r
 
 ### Interstellar Dimensions
 
-- **Integrator**: Low-order symplectic integrator (e.g., leapfrog) with very large timesteps.
+- **Integrator**: Low-order symplectic integrator (e.g., leapfrog) with very large time-steps.
 - **Physics**: Approximate galactic dynamics; stars treated as point masses.
-- **Timestep**: Seconds to minutes per tick.
+- **Time-step**: Seconds to minutes per tick.
 
 Interstellar dimensions provide context but rarely need high-fidelity simulation.
 
@@ -141,7 +141,7 @@ Interstellar dimensions provide context but rarely need high-fidelity simulation
 
 - **Integrator**: N-body gravitational integrator (e.g., Verlet, RK4, or adaptive methods).
 - **Physics**: Point-mass gravity, solar radiation pressure, simplified drag.
-- **Timestep**: 1–10 seconds per tick.
+- **Time-step**: 1–10 seconds per tick.
 
 Interplanetary dimensions handle transfer orbits, convoy movement, and long-duration burns.
 
@@ -149,7 +149,7 @@ Interplanetary dimensions handle transfer orbits, convoy movement, and long-dura
 
 - **Integrator**: High-order symplectic or semi-implicit integrator for rigid-body dynamics in gravity wells.
 - **Physics**: Gravity, atmospheric drag (altitude-dependent), collision detection, docking forces.
-- **Timestep**: 0.05–0.1 seconds per tick (20–50 Hz).
+- **Time-step**: 0.05–0.1 seconds per tick (20–50 Hz).
 
 Orbit dimensions are the "KSP layer"—detailed orbital mechanics with docking, rendezvous, and debris simulation.
 
@@ -157,7 +157,7 @@ Orbit dimensions are the "KSP layer"—detailed orbital mechanics with docking, 
 
 - **Integrator**: Rigid-body dynamics with terrain collisions, friction, and atmospheric effects.
 - **Physics**: Full 6-DOF (six degrees of freedom) dynamics, terrain interaction, gravity, wind.
-- **Timestep**: 0.01–0.05 seconds per tick (20–100 Hz).
+- **Time-step**: 0.01–0.05 seconds per tick (20–100 Hz).
 
 Surface dimensions handle landed ships, rovers, walking players, and surface construction.
 
@@ -165,7 +165,7 @@ Surface dimensions handle landed ships, rovers, walking players, and surface con
 
 - **Integrator**: High-fidelity rigid-body and constraint-based dynamics (e.g., impulse-based collision response).
 - **Physics**: Detailed collisions, joint constraints, machinery, player movement, local forces.
-- **Timestep**: 0.005–0.02 seconds per tick (50–200 Hz).
+- **Time-step**: 0.005–0.02 seconds per tick (50–200 Hz).
 
 Interior dimensions are the most detailed, simulating individual objects, machinery, and player interactions inside ships and stations.
 
@@ -174,7 +174,7 @@ Interior dimensions are the most detailed, simulating individual objects, machin
 All integrators operate on the same **phase state representation**. The differences lie in:
 
 - Which forces and constraints are applied.
-- How large the timestep is.
+- How large the time-step is.
 - How much computational effort is spent on precision.
 
 When an entity transitions between dimensions, its phase state is preserved exactly—only the evolution rules change.
@@ -227,7 +227,7 @@ All entities use the same phase state format. There is no ambiguity about what "
 
 ### 2. Deterministic Integrators
 
-Symplectic and fixed-timestep integrators produce bit-identical results across platforms (assuming IEEE 754 floating-point compliance and identical initial conditions).
+Symplectic and fixed time-step integrators produce bit-identical results across platforms (assuming IEEE 754 floating-point compliance and identical initial conditions).
 
 ### 3. Deterministic Handoffs
 
@@ -302,7 +302,7 @@ Symplectic integrators and coordinate transformations preserve energy and phase-
 
 ### Determinism by Design
 
-Fixed timesteps, deterministic integrators, and exact transformations ensure that all clients compute identical results, making lockstep multiplayer tractable.
+Fixed time-steps, deterministic integrators, and exact transformations ensure that all clients compute identical results, making lockstep multiplayer tractable.
 
 ### Extensibility
 
@@ -323,6 +323,6 @@ The phase-space architecture is the conceptual backbone of Phase Space. All othe
 - **Implementing new dimension types** (e.g., anomaly dimensions, subsurface strata).
 - **Designing Context-specific physics** (e.g., Fold pocket time dilation, wormhole traversal).
 - **Debugging multiplayer desyncs** (tracking state divergence through phase-space evolution).
-- **Optimizing simulation performance** (choosing appropriate integrators and timesteps per dimension).
+- **Optimizing simulation performance** (choosing appropriate integrators and time-steps per dimension).
 
 As the engine evolves, this conceptual model will remain stable, even as specific integrators, dimension types, and Contexts change. The phase-space architecture is not just a design decision—it's the **unifying principle** that makes Phase Space's multiscale, deterministic, multiplayer-safe simulation possible.
