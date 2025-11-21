@@ -1,6 +1,6 @@
 # Simulation Overview
 
-Aegir Drift simulates the universe at multiple nested scales:
+Phase Space simulates the universe at multiple nested scales:
 
 1. Ship Interiors  
 2. Planetary Surfaces  

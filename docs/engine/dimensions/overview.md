@@ -1,6 +1,6 @@
 # Dimension System
 
-A **dimension** in Aegir-Core is a self-contained simulation space with its own:
+A **dimension** in Phase Space Core is a self-contained simulation space with its own:
 
 - coordinate system
 - physics fidelity

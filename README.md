@@ -1,7 +1,7 @@
-# Aegir Drift — Design Documentation (Public Archive)
+# Phase Space — Design Documentation (Public Archive)
 
 This repository contains the public-facing design documents for the
-Aegir Drift simulation engine and its flagship universe Context, Fold.
+Phase Space simulation engine and its flagship universe Context, Fold.
 
 ## What This Repo Contains
 
@@ -20,7 +20,7 @@ This repo does **not** include:
 - Proprietary tooling
 - Commercial assets
 
-The Aegir Drift Engine source code is maintained in a private
+The Phase Space Engine source code is maintained in a private
 repository and remains proprietary.
 
 ## License
@@ -28,7 +28,7 @@ repository and remains proprietary.
 All creative content in this repository is licensed under
 **CC BY-NC-SA 4.0**. See `LICENSE-CONTENT.md` for details.
 
-The terms “Aegir Drift,” “Fold,” “Foldstones,” “Fold Kernel,” and
+The terms “Phase Space,” “Fold,” “Foldstones,” “Fold Kernel,” and
 related names are trademarks of the author and may not be used for
 commercial purposes.
 

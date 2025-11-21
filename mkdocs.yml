@@ -1,8 +1,8 @@
-site_name: Aegir Drift Documentation
-site_description: "Design documents for the Aegir Drift simulation engine and its Contexts."
+site_name: Phase Space Documentation
+site_description: "Design documents for the Phase Space simulation engine and its Contexts."
 site_url: ""
-repo_name: aegir-drift/aegir-drift-docs
-repo_url: https://github.com/aegir-drift/aegir-drift-docs
+repo_name: nilsnark/phase-space-docs
+repo_url: https://github.com/nilsnark/phase-space-docs
 
 theme:
   name: material
@@ -16,9 +16,14 @@ theme:
     - toc.integrate
     - navigation.top
   palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
     - scheme: slate
-      primary: deep purple
-      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
 markdown_extensions:
   - admonition
@@ -100,6 +105,6 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/aegir-drift/aegir-drift-docs
+      link: https://github.com/nilsnark/phase-space-docs
 copyright:
-  © Aegir Drift Project — See License and Trademark for details.
+  © Phase Space Project — See License and Trademark for details.

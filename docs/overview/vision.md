@@ -1,10 +1,10 @@
-# Aegir Drift — Vision
+# Phase Space — Vision
 
-Aegir Drift is a universal simulation engine built on realistic physics, deterministic multiplayer, and a moddable systems architecture. It is not a game by itself — it is a substrate on top of which entire universes can be defined.
+Phase Space is a universal simulation engine built on realistic physics, deterministic multiplayer, and a moddable systems architecture. It is not a game by itself — it is a substrate on top of which entire universes can be defined.
 
 These universes are called **Contexts**.
 
-## What Aegir Drift Provides
+## What Phase Space Provides
 
 - Newtonian and orbital physics inspired by KSP.
 - Hierarchical simulation scales: interior → surface → orbital → interplanetary → interstellar.
@@ -13,7 +13,7 @@ These universes are called **Contexts**.
 - A sandboxed scripting environment usable by both the base engine and Contexts.
 - A worldgen pipeline capable of producing entire galaxies.
 
-## What Aegir Drift Enables
+## What Phase Space Enables
 
 - Infinite moddability.
 - Multiple universes built on one engine.
@@ -23,7 +23,7 @@ These universes are called **Contexts**.
 
 ## The Flagship Context: Fold
 
-Fold is the canonical example universe built on Aegir Drift, showcasing:
+Fold is the canonical example universe built on Phase Space, showcasing:
 
 - Foldstones (pocket-dimension anchors)
 - Fold Kernels (spacetime-regulating computational monoliths)

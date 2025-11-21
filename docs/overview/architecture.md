@@ -1,8 +1,8 @@
-# Aegir Architecture Overview
+# Phase Space Architecture Overview
 
-Aegir Drift is structured into three clean layers:
+Phase Space is structured into three clean layers:
 
-## **1. Aegir-Core (Engine Layer)**
+## **1. Phase Space Core (Engine Layer)**
 
 The deterministic simulation substrate.
 Responsible for:
@@ -30,7 +30,7 @@ Responsible for:
 
 Contexts define *what is possible.*
 
-## **3. Aegir-Interface (Perception Layer)**
+## **3. Phase Space Interface (Perception Layer)**
 
 Clients, UIs, and visualizers.
 Responsible for:
@@ -43,11 +43,11 @@ Responsible for:
 
 Interface defines *what is perceived.*
 
-Each layer is independent; new interfaces or new contexts can be added without modifying Aegir-Core.
+Each layer is independent; new interfaces or new contexts can be added without modifying Phase Space Core.
 
 ## Context-Agnostic Core
 
-Aegir-Core does not assume any specific physics or technology beyond classical mechanics and deterministic ECS rules.
+Phase Space Core does not assume any specific physics or technology beyond classical mechanics and deterministic ECS rules.
 
 Foldstone mechanics, wormholes, NPF, and pocket dimensions exist **only** within the Fold Context.
 
@@ -59,4 +59,4 @@ Other contexts may implement:
 * hard-science sub-light-only universes
 * surreal or anomaly physics
 
-Aegir-Core treats all contexts equally and provides no special-case behavior for Fold.
+Phase Space Core treats all contexts equally and provides no special-case behavior for Fold.

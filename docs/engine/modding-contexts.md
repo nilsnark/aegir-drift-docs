@@ -17,7 +17,7 @@ id: fold-pocket
 version: 0.1.0
 name: Fold Pocket
 description: "Adds pocket-dimension mechanics and foldstone entities."
-author: Aegir Team
+author: Phase Space Team
 
 dependencies:
   - core >= 0.1.0

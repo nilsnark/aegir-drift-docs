@@ -75,4 +75,4 @@ Examples:
 
 The engine treats all dimensions as first-class peers.
 
-Aegir-Core remains responsible for scheduling and determinism; Contexts provide the rules and content that give each dimension its character.
+Phase Space Core remains responsible for scheduling and determinism; Contexts provide the rules and content that give each dimension its character.

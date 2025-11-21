@@ -1,6 +1,6 @@
 # Multiplayer Architecture
 
-Aegir Drift multiplayer is deterministic lockstep:
+Phase Space multiplayer is deterministic lockstep:
 
 - Each simulation tick produces identical results for all clients.
 - Inputs are synchronized, not states.
@@ -12,7 +12,7 @@ Networking is thin; simulation consistency is thick.
 ## Multiplayer Dimension Synchronization
 
 Dimension transitions must remain consistent across all clients and servers.  
-Aegir-Core enforces deterministic, authoritative transitions using strict rules.
+Phase Space Core enforces deterministic, authoritative transitions using strict rules.
 
 ### Deterministic Transforms
 
@@ -27,7 +27,7 @@ All clients receive the same post-transform state.
 
 ### Authority Rules
 
-- Aegir-Core (server) is the final authority.
+- Phase Space Core (server) is the final authority.
 - Clients cannot request or enforce transitions directly.
 - Client-side predictions must be reversible.
 
