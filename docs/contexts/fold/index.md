@@ -2,7 +2,7 @@
 
 Fold is a long‑running civilization (30,000+ years of development) that has mastered spacetime engineering through Foldstones, Fold Kernels, and a tightly‑regulated network of wormholes, seedships, and pocket dimensions.
 
-Fold adds, on top of Core / baseline Aegir Drift:
+Fold adds, on top of Core / baseline Phase Space:
 
 - Foldstones and pocket dimensions
 - Fold Kernels that regulate Foldspace

@@ -1,6 +1,6 @@
 # Design Principles
 
-Aegir Drift is guided by three pillars:
+Phase Space is guided by three pillars:
 
 ## 1. Reality First
 

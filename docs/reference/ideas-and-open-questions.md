@@ -1,6 +1,6 @@
 # Ideas & Open Questions (Appendix)
 
-> This page collects **provisional ideas** and **open questions** about Aegir Drift. Nothing here is final; items may change or be removed as the design evolves.
+> This page collects **provisional ideas** and **open questions** about Phase Space. Nothing here is final; items may change or be removed as the design evolves.
 
 ## Ideas
 

@@ -1,6 +1,6 @@
 # Contexts Overview
 
-Contexts are self-contained universes built on top of the Aegir Drift engine. Each Context defines its own fiction, rules, and content, while relying on the shared simulation, ECS, and networking foundations provided by the engine.
+Contexts are self-contained universes built on top of the Phase Space engine. Each Context defines its own fiction, rules, and content, while relying on the shared simulation, ECS, and networking foundations provided by the engine.
 
 Where the **Engine** pages describe the generic building blocks (dimensions, entities/components/systems, lockstep multiplayer, scripting runtime), Contexts describe concrete *worlds* that plug those blocks together in different ways. The Fold Context is one such world; this page explains the generic model that Fold (and other Contexts) follow.
 
