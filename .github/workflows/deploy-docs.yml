@@ -37,29 +37,20 @@ jobs:
             mkdocs-section-index
 
       - name: Build site
-        run: mkdocs build --clean
+        run: mkdocs build --strict
 
-      - name: Clone Pages repo
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
 
-          git clone --depth 1 \
-            git@github.com:nilsnark/phase-space.github.io.git \
-            /tmp/pages
-
-      - name: Sync built site into /docs
-        run: |
-          mkdir -p /tmp/pages/docs
-          rm -rf /tmp/pages/docs/*
-          cp -r site/* /tmp/pages/docs/
-
-          cd /tmp/pages
-          if [ -n "$(git status --porcelain)" ]; then
-            git add docs
-            git commit -m "Update docs from phase-space-docs@${{ github.sha }}"
-            git push origin main
-          else
-            echo "No changes to commit; nothing to push."
-          fi
-          rm -rf /tmp/pages
+  deploy:
+    needs: build
+    runs-on: self-hosted
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
