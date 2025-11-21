@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -57,7 +57,7 @@ jobs:
           cd /tmp/pages
           if [ -n "$(git status --porcelain)" ]; then
             git add docs
-            git commit -m "Update docs from aegir-drift-docs@${{ github.sha }}"
+            git commit -m "Update docs from phase-space-docs@${{ github.sha }}"
             git push origin main
           else
             echo "No changes to commit; nothing to push."
