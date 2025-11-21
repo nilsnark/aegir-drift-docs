@@ -15,9 +15,32 @@ Aegir-Core recognizes four Core Context dimension types. Contexts may layer cust
 
 **Interior Dimensions.** Interiors (ships, stations, habitats) are always children of a Surface frame. They inherit Surface tick cadence and time base but may define custom local coordinates. Interiors are not Core canonical types; they exist as Context-defined extensions registered beneath a Surface parent.
 
+### Default Dimension Physics Baselines
+
+The core engine seeds six canonical dimension types. Each type automatically resolves to a
+specific physics profile that determines the integrator, fixed timestep, and whether gravity
+or atmospheric drag are applied. Use this matrix when designing new Contexts so you know what
+the baseline simulation provides out of the box.
+
+| Dimension Type (ID) | Default Physics Profile ID | Integrator | Fixed Timestep | Gravity | Atmosphere / Drag | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| Interstellar (`core.dim.interstellar`) | `core.physics.interstellar.default` | On-Rails | 10 s | ✅ | ❌ | Diluted gravity wells for strategic-scale motion. |
+| Interplanetary (`core.dim.interplanetary`) | `core.physics.interplanetary.default` | Patched Conics | 0.5 s | ✅ | ❌ | Star-system navigation baseline. |
+| Orbital (`core.dim.orbital`) | `core.physics.orbital.default` | Patched Conics | 1/30 s (≈33.3 ms) | ✅ | ❌ | Precision orbital operations around bodies. |
+| Surface (`core.dim.surface`) | `core.physics.surface.default` | Semi-Implicit | 1/60 s (≈16.7 ms) | ✅ | ✅ | Atmospheric drag enabled for low-altitude flight. |
+| Interior (`core.dim.interior`) | `core.physics.interior.default` | Semi-Implicit | 1/120 s (≈8.3 ms) | ❌ | ✅ | Microgravity ship/bunker spaces, drag retained for air handling. |
+| Pocket (`core.dim.pocket`) | `core.physics.pocket.default` | Semi-Implicit | 1/100 s (10 ms) | ❌ | ❌ | Foldspace bubbles; includes enter/exit/fixed-step hooks (`core.hooks.pocket.*`). |
+
+- Gravity ✅ means the integrator applies Newtonian forces; ❌ indicates gravity is disabled.
+- Atmosphere/drag ✅ enables atmospheric drag (and, by extension, aero heating hooks once
+  implemented). Pocket dimensions deliberately run vacuum conditions despite optional hooks.
+- Each physics profile ID above is registered in code via `PhysicsProfile::core_*` and tied to
+  the matching dimension type through the `DimensionTypeRegistry`. Override those IDs (or add
+  new ones) when a Context needs different baselines.
+
 ## Hierarchy & Relationships
 
-```
+```text
 Interstellar
   └─ Interplanetary (per star system)
        └─ Orbital (per major body)

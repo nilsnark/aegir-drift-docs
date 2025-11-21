@@ -23,7 +23,8 @@ pip install \
     mkdocs \
     mkdocs-material \
     mkdocs-literate-nav \
-    mkdocs-section-index 
+    mkdocs-section-index \
+    mkdocs-terminal
 #    mkdocs-exporter
 
 # Clean up apt caches
