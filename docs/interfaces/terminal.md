@@ -1,6 +1,6 @@
 # Terminal Reference Client
 
-Aegir-Terminal is the baseline Interface implementation.  
+Phase Space Terminal is the baseline Interface implementation.  
 It provides:
 
 - deterministic logging of world state

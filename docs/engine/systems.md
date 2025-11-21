@@ -1,6 +1,6 @@
 # Systems (Entity–Component–System)
 
-This page describes the core Entity–Component–System (ECS) concepts used by the Aegir Drift engine, how they map to data and behavior, and the planned ECS roadmap phases.
+This page describes the core Entity–Component–System (ECS) concepts used by the Phase Space engine, how they map to data and behavior, and the planned ECS roadmap phases.
 
 ## Contract (short)
 

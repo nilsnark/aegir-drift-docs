@@ -2,7 +2,7 @@
 
 ## Lockstep multiplayer guarantee
 
-- Scope: Aegir Drift simulates the universe at multiple nested scales (Ship Interiors → Planetary Surfaces → Low Orbit → High Orbit → Interplanetary Space → Interstellar Space). Each scale is modeled as a separate "dimension" with its own spatial resolution and simulation time-step.
+- Scope: Phase Space simulates the universe at multiple nested scales (Ship Interiors → Planetary Surfaces → Low Orbit → High Orbit → Interplanetary Space → Interstellar Space). Each scale is modeled as a separate "dimension" with its own spatial resolution and simulation time-step.
 - Physics: By default, physics are Newtonian; Contexts can extend or replace the model. Relativistic effects are modeled where relevant (very high velocity or deep gravity wells).
 - Determinism / Tick model: the engine runs deterministically so each dimension advances in fixed ticks. Key implications:
   - Simulation state advances in fixed ticks per-dimension (a fixed timestep per dimension).

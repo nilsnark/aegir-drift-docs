@@ -22,7 +22,7 @@ Handoffs are designed to be:
 
 ## Dimension Activation and Streaming
 
-Aegir-Core dynamically activates and deactivates dimensions to optimize simulation cost.
+Phase Space Core dynamically activates and deactivates dimensions to optimize simulation cost.
 
 ### Activation Rules
 

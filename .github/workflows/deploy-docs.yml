@@ -45,7 +45,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
           git clone --depth 1 \
-            https://x-access-token:${{ secrets.PAGES_AEGIR_DOCS_BOT_TOKEN }}@github.com/aegir-drift/aegir-drift.github.io.git \
+            https://x-access-token:${{ secrets.PAGES_PHASE_SPACE_DOCS_BOT_TOKEN }}@github.com/nilsnark/phase-space.github.io.git \
             /tmp/pages
 
       - name: Sync built site into /docs

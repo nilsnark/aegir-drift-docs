@@ -7,7 +7,7 @@ Each dimension has:
 - A **time scale** (multiplier on real/engine time).
 - A **priority** (used when CPU is constrained).
 
-The scheduler in Aegir-Core:
+The scheduler in Phase Space Core:
 
 1. Computes how much engine time has elapsed since the last frame.
 2. For each dimension:
