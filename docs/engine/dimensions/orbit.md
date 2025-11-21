@@ -81,7 +81,7 @@ The Orbit integrator simulates:
 
 - **Point-Mass Gravity**: Primary gravitational force from the central body (planet or moon)
 - **Atmospheric Drag**: Altitude-dependent drag force for entities within or near the atmosphere (modeled using exponential density profile)
-- **Oblateness (J2 Perturbation)**: Deviation from spherical gravity due to planetary flattening (important for accurate orbital prediction over long periods)
+- **Oblateness (J2 Perturbation)**: Deviation from spherical gravity due to planetary flattening, where J2 is the second zonal harmonic coefficient representing the planet's quadrupole moment (important for accurate orbital prediction over long periods)
 - **Third-Body Perturbations**: Gravitational effects from nearby moons or the star (optional, for high-precision orbits)
 - **Collision Detection**: Detection of collisions between entities (ships, stations, debris) and with the planet's surface or atmosphere boundary
 - **Docking Forces**: Contact forces, latches, and joint constraints during docking maneuvers
