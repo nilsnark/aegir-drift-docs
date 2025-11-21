@@ -62,6 +62,7 @@ nav:
   - Engine:
       - Engine Overview: engine/overview.md
       - Simulation Overview: engine/simulation-overview.md
+      - Phase-Space Architecture: engine/phase-space-architecture.md
       - Dimensions: 
         - Dimensions Overview: engine/dimensions/overview.md
         - Types: engine/dimensions/types.md
