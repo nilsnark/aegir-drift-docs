@@ -71,6 +71,11 @@ nav:
       - Dimensions: 
         - Dimensions Overview: engine/dimensions/overview.md
         - Types: engine/dimensions/types.md
+        - Interstellar: engine/dimensions/interstellar.md
+        - Interplanetary: engine/dimensions/interplanetary.md
+        - Orbit: engine/dimensions/orbit.md
+        - Surface: engine/dimensions/surface.md
+        - Interior: engine/dimensions/interior.md
         - Scheduling: engine/dimensions/scheduling.md
         - Transitions: engine/dimensions/transitions.md
       - Systems: engine/systems.md
