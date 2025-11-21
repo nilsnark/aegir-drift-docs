@@ -135,7 +135,7 @@ An entity exits the Interplanetary dimension when:
 
 Typical thresholds for Interplanetary ↔ Orbit transitions:
 
-- **Sphere of Influence (SOI)**: Defined using the Hill sphere or Laplace sphere radius (e.g., for Earth, ~0.93 million km)
+- **Sphere of Influence (SOI)**: Defined using the Hill sphere radius (e.g., for Earth, ~0.93 million km), which approximates the region where a planet's gravity dominates over the star's
 - **Velocity Criteria**: An entity approaching a planet at high velocity may be transitioned earlier to ensure accurate capture modeling
 
 ## Invariants Preserved
