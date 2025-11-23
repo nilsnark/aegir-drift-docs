@@ -20,4 +20,4 @@ All simulation runs deterministically, enabling lockstep multiplayer.
 
 ## Cross-Reference: Default Dimension Tick Rates
 
-For a detailed table of default tick rates for each dimension type, see the [Default Dimension Tick Rates](../deterministic-simulation.md#default-dimension-tick-rates) section in the Deterministic Simulation documentation.
+For a detailed table of default tick rates for each dimension type, see the [Default Dimension Tick Rates](deterministic-simulation.md#default-dimension-tick-rates) section in the Deterministic Simulation documentation.

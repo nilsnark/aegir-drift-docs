@@ -16,7 +16,7 @@ Use the navigation to explore contexts (like the Fold and its cosmology), engine
 If you’re new to Phase Space, a good reading order is:
 
 1. **[Vision](overview/vision.md)** – the high-level goals, design principles, and what makes Phase Space different.
-2. **[Architecture](overview/architecture.md)** – how the engine, contexts, and dimensions are structured.
+2. **[Architecture](architecture/overview.md)** – how the engine, contexts, and dimensions are structured.
 3. **[Glossary](reference/glossary.md)** – canonical definitions of key terms you’ll see throughout the docs.
 
 From there, dive into the contexts, engine subsystems, or reference sections that match the part of the project you’re working on.

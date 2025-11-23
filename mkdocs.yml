@@ -63,6 +63,10 @@ nav:
       - Roadmap: reference/roadmap.md
   - Engine:
       - Engine Overview: engine/overview.md
+      - Deterministic Simulation: engine/deterministic-simulation.md
+      - Modding Physics: engine/modding-physics.md
+      - Phase Space Architecture: engine/phase-space-architecture.md
+      - Physics Profiles: engine/physics-profiles.md
       - Simulation:
         - Overview: engine/simulation/overview.md
         - Time Model: engine/simulation/time-model.md
@@ -76,6 +80,7 @@ nav:
         - Orbit: engine/dimensions/orbit.md
         - Surface: engine/dimensions/surface.md
         - Interior: engine/dimensions/interior.md
+        - Pocket: engine/dimensions/pocket.md
         - Scheduling: engine/dimensions/scheduling.md
         - Transitions: engine/dimensions/transitions.md
       - Systems: engine/systems.md
