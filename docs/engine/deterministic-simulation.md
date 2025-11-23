@@ -421,6 +421,26 @@ Unordered processing (e.g., based on network arrival time) causes nondeterminism
 
 Canonical ordering eliminates this issue.
 
+## Default Dimension Tick Rates
+
+The Phase Space engine defines specific default tick rates for each dimension type. These tick rates represent the frequency at which the engine updates the simulation state for entities within that dimension. While contexts or game modes can override these values, the defaults provide a consistent baseline for engine behavior.
+
+| Dimension Type   | Default Tick Rate (Hz) |
+|------------------|-------------------------|
+| Interstellar     | 0.1 Hz                 |
+| Interplanetary   | 1 Hz                   |
+| Orbit            | 10 Hz                  |
+| Surface          | 60 Hz                  |
+| Interior         | 120 Hz                 |
+| Pocket           | 30 Hz                  |
+
+### Default vs Configured Tick Rates
+
+- **Default Tick Rates**: These are the tick rates the engine uses out of the box, without any modifications.
+- **Configured Tick Rates**: These are tick rates that can be adjusted by contexts, game modes, or mod authors to suit specific needs.
+
+By distinguishing between default and configured tick rates, the engine ensures clarity and flexibility for developers and modders.
+
 ## Rules for Maintaining Determinism
 
 To ensure deterministic simulation, developers must avoid the following in core simulation code:

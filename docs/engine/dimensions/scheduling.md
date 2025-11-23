@@ -16,3 +16,7 @@ The scheduler in Phase Space Core:
 3. Ensures deterministic stepping by using fixed dt per dimension, regardless of real-time jitter.
 
 Pocket dimensions can use `time_scale = 0` to effectively pause when sealed, or a different scale when opened (subject to Context rules).
+
+## Cross-Reference: Default Dimension Tick Rates
+
+For a detailed table of default tick rates for each dimension type, see the [Default Dimension Tick Rates](../deterministic-simulation.md#default-dimension-tick-rates) section in the Deterministic Simulation documentation.
