@@ -64,13 +64,14 @@ The engine treats the core phase state (position, momentum, orientation, angular
 
 ## Dimensions as Coordinate Charts
 
-The engine divides the universe into five primary **dimension types**:
+The engine divides the universe into six primary **dimension types**:
 
 1. **Interstellar**: Galactic-scale motion of star systems.
 2. **Interplanetary**: Motion within a star system (planets, asteroids, ships in transfer).
 3. **Orbit**: Near-body orbits around planets or stations.
 4. **Surface**: Planetary surfaces, landed ships, ground bases.
-5. **Interior**: Ship interiors, station modules, pocket dimensions.
+5. **Interior**: Ship interiors, station modules.
+6. **Pocket**: Exotic Fold spaces with unique time-dilation properties, serving as non-local interiors.
 
 Each dimension type corresponds to a different **coordinate chart** on the same underlying phase space. Charts differ in:
 
@@ -100,7 +101,7 @@ No information is lost; no discontinuity occurs. The transformation is **symplec
 
 To manage numerical precision and physical intuition, the engine organizes reference frames into a hierarchy:
 
-```
+````markdown
 Galactic Frame (inertial, galactic center origin)
   ├─ System Frames (inertial, star barycenter origin)
   │   ├─ Planet Inertial Frames (inertial, planet center origin)
@@ -109,7 +110,7 @@ Galactic Frame (inertial, galactic center origin)
   │   │   └─ Orbital Frames (planet-centric, varying eccentricity)
   │   └─ Interplanetary Frame (barycentric, system-wide)
   └─ Interstellar Frame (galactic, between stars)
-```
+````
 
 ### Frame Properties
 
