@@ -103,7 +103,7 @@ The engine's core simulation loop runs at a **fixed timestep** with a **canonica
 
 ### High-Level Loop Structure
 
-```
+```plaintext
 1. Process Player Inputs
    - Read and validate inputs from all clients
    - Apply inputs to controllable entities
@@ -220,7 +220,7 @@ Each integrator is chosen to balance accuracy, stability, and performance for it
 
 The engine organizes reference frames into a **hierarchical graph** spanning multiple scales:
 
-```
+```text
 Galactic Frame (inertial, galactic center origin)
   ├─ System Frames (inertial, star barycenter origin)
   │   ├─ Planet Inertial Frames (inertial, planet center origin)
@@ -379,7 +379,9 @@ Lockstep ensures:
 - Desyncs are immediately detectable (state checksums diverge).
 - Bandwidth is minimal (only inputs are transmitted, not full state).
 
-### Rollback and Re-simulation
+### Rollback and Re-simulation Process
+
+Rollback and re-simulation are critical for debugging and ensuring determinism. This section explains how the engine handles these processes.
 
 When a client receives delayed inputs or detects a misprediction:
 
@@ -530,3 +532,40 @@ Deterministic simulation is the foundation of the Phase Space engine's multiplay
 Deterministic evolution of PhaseState across multiple charts (dimensions) is not just a technical detail—it is the unifying principle that makes Phase Space's multiscale, multiplayer-safe simulation possible. Without it, the engine's ambitious scope (interstellar to interior, thousands of active dimensions, lockstep multiplayer, deterministic replay) would be intractable.
 
 By adhering to the determinism rules and leveraging the phase-space architecture, developers can build systems, Contexts, and gameplay features with confidence that the simulation will remain consistent, stable, and multiplayer-safe across all scales and scenarios.
+
+### Relativistic Extensions
+
+The engine supports relativistic corrections for high-velocity entities. These include:
+
+- **Lorentz Gamma (γ)**: Captures time dilation and length contraction effects at relativistic speeds.
+- **Relativistic Momentum**: Adjusts linear momentum to account for relativistic mass increase.
+
+These extensions ensure that the `PhaseState` remains accurate even in extreme conditions, such as near-light-speed travel.
+
+### Mass and Inertia Components
+
+Mass properties are represented as separate components but are integral to the `PhaseState`:
+
+- **Mass** (`m`): Total mass, which may evolve due to fuel consumption or cargo transfer.
+- **Inertia Tensor** (`I`): Governs rotational dynamics and changes deterministically based on structural modifications.
+
+### Engine/Fuel State
+
+Propulsion systems contribute to the `PhaseState` through forces and torques:
+
+- **Throttle**: Determines the magnitude of thrust.
+- **Specific Impulse (Isp)**: Affects fuel efficiency and thrust duration.
+- **Fuel Mass**: Decreases over time, altering the mass component of the `PhaseState`.
+
+### Pocket State
+
+`Pocket` or `Fold` states extend the `PhaseState` with exotic properties:
+
+- **Aperture Configuration**: Describes the state of the Fold aperture.
+- **Time Dilation Factor**: Captures the unique temporal behavior within a Pocket dimension.
+
+These fields enable the simulation of non-local interiors and exotic physics.
+
+### PhaseState in ECS Terms
+
+In the engine's ECS architecture, the `PhaseState` is realized as a collection of components rather than a single monolithic structure. This modular approach allows systems to operate on specific aspects of the `PhaseState`, such as position, momentum, or extended fields.

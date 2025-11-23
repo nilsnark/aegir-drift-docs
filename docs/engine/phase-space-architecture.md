@@ -62,6 +62,41 @@ Contexts or systems may extend the phase state with additional degrees of freedo
 
 The engine treats the core phase state (position, momentum, orientation, angular momentum, mass) as canonical and universal, while allowing extensions for specialized simulation needs.
 
+### Relativistic Extensions
+
+The `PhaseState` supports relativistic corrections, including:
+
+- **Lorentz Gamma (γ)**: Models time dilation and length contraction.
+- **Relativistic Momentum**: Adjusts for relativistic mass effects.
+
+These ensure accurate simulation at high velocities.
+
+### Mass and Inertia Components
+
+Mass properties are modular but essential to the `PhaseState`:
+
+- **Mass** (`m`): Evolves deterministically based on events like fuel consumption.
+- **Inertia Tensor** (`I`): Governs rotational dynamics and adapts to structural changes.
+
+### Engine/Fuel State
+
+Propulsion systems influence the `PhaseState` through:
+
+- **Throttle**: Controls thrust magnitude.
+- **Specific Impulse (Isp)**: Determines fuel efficiency.
+- **Fuel Mass**: Affects the mass component over time.
+
+### Pocket State
+
+`Pocket` dimensions introduce unique fields to the `PhaseState`:
+
+- **Aperture Configuration**: Represents Fold aperture states.
+- **Time Dilation Factor**: Captures temporal anomalies within Pockets.
+
+### PhaseState in ECS Terms
+
+The `PhaseState` is implemented as a set of ECS components, enabling modular and efficient simulation. This design allows systems to operate on specific aspects of the `PhaseState`, ensuring flexibility and scalability.
+
 ## Dimensions as Coordinate Charts
 
 The engine divides the universe into six primary **dimension types**:
