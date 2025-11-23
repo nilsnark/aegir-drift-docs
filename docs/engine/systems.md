@@ -41,6 +41,24 @@ Common systems:
 - PowerSystem — manages Reactor components and power networks
 - PocketSystem — manages pocket-dimension state
 
+## Dimension-Aware ECS Shards
+
+The ECS system in Phase Space partitions state across dimensions using **DimensionInstanceRegistry**. This ensures:
+
+- Entities are isolated to their respective dimensions.
+
+- Systems operate only on entities within the same dimension.
+
+### PocketSystem Example
+
+The **PocketSystem** manages:
+
+- State for pocket dimensions, including time dilation and entry/exit effects.
+
+- Synchronization with the DimensionInstanceRegistry to ensure consistency.
+
+For more on dimensions, see `docs/engine/dimensions/overview.md`.
+
 ## How contexts can extend the ECS
 
 Contexts (mods) may register new component schemas and systems. They should declare component versions and any compatibility metadata. The engine supports hot-loading of component schemas in later roadmap phases; until then, contexts must provide compatibility layers.
