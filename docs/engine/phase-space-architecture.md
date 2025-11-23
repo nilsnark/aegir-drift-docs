@@ -327,3 +327,27 @@ The phase-space architecture is the conceptual backbone of Phase Space. All othe
 - **Optimizing simulation performance** (choosing appropriate integrators and time-steps per dimension).
 
 As the engine evolves, this conceptual model will remain stable, even as specific integrators, dimension types, and Contexts change. The phase-space architecture is not just a design decision—it's the **unifying principle** that makes Phase Space's multiscale, deterministic, multiplayer-safe simulation possible.
+
+## Gravity Models
+
+### Gravity Model Overview
+
+The engine uses the `GravityModel` abstraction to define how gravity behaves in different dimensions. This modular approach allows dimensions to select the most appropriate gravity model for their needs, balancing accuracy and performance.
+
+### Built-in Gravity Models
+
+The following gravity models are available out of the box:
+
+- **Constant Field**: A uniform gravitational field, useful for simple simulations or interiors.
+- **Point-Mass N-Body**: Models gravitational interactions between multiple bodies, suitable for interplanetary and orbital dynamics.
+- **Patched Conics**: Simplifies N-body problems into a series of two-body problems, commonly used for on-rails orbits in interplanetary transfers.
+
+### Extending Gravity
+
+Contexts can register custom gravity models to tailor gravitational behavior for specific dimensions. While the engine does not yet expose a detailed API, the conceptual pipeline involves:
+
+1. Defining a new `GravityModel` implementation.
+2. Registering the model with the engine's gravity registry.
+3. Assigning the custom model to a dimension during its initialization.
+
+This extensibility ensures that modders and advanced users can adapt gravity to unique gameplay or simulation requirements.
