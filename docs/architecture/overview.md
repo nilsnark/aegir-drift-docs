@@ -16,6 +16,8 @@ Responsible for:
 
 Core defines *what is true.*
 
+For the canonical definition of dimension scales, coordinate frames, and tick policies, see the [Aegir-Core Dimension Hierarchy](../architecture/dimensions.md).
+
 ## **2. Contexts (Universe Layer)**
 
 Modular universe definitions.

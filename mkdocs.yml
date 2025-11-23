@@ -57,16 +57,32 @@ nav:
   - Overview:
       - Vision: overview/vision.md
       - Design Principles: overview/design-principles.md
-      - Architecture: overview/architecture.md
+      - Architecture: 
+        - architecture/overview.md
+        - architecture/dimensions.md
       - Roadmap: reference/roadmap.md
   - Engine:
       - Engine Overview: engine/overview.md
-      - Simulation Overview: engine/simulation-overview.md
+      - Deterministic Simulation: engine/deterministic-simulation.md
+      - Modding Physics: engine/modding-physics.md
+      - Phase Space Architecture: engine/phase-space-architecture.md
+      - Physics Profiles: engine/physics-profiles.md
+      - Simulation:
+        - Overview: engine/simulation/overview.md
+        - Time Model: engine/simulation/time-model.md
+        - Persistence: engine/simulation/persistence.md
+        - Scheduling: engine/simulation/scheduling.md
       - Phase-Space Architecture: engine/phase-space-architecture.md
       - Deterministic Simulation: engine/deterministic-simulation.md
       - Dimensions: 
         - Dimensions Overview: engine/dimensions/overview.md
         - Types: engine/dimensions/types.md
+        - Interstellar: engine/dimensions/interstellar.md
+        - Interplanetary: engine/dimensions/interplanetary.md
+        - Orbit: engine/dimensions/orbit.md
+        - Surface: engine/dimensions/surface.md
+        - Interior: engine/dimensions/interior.md
+        - Pocket: engine/dimensions/pocket.md
         - Interstellar: engine/dimensions/interstellar.md
         - Interplanetary: engine/dimensions/interplanetary.md
         - Orbit: engine/dimensions/orbit.md
@@ -99,6 +115,7 @@ nav:
               - Wormhole Protocols: contexts/fold/specs/wormhole-protocol.md
   - Interfaces:
     - Interfaces Overview: interfaces/overview.md
+    - Timekeeping Architecture: interfaces/timekeeping-architecture.md
     - Terminal Interface: interfaces/terminal.md
   - Protocols:
       - Pocket Time & Stasis Protocols: protocols/pockets-and-time.md
