@@ -45,19 +45,20 @@ Common systems:
 
 The ECS system in Phase Space partitions state across dimensions using **DimensionInstanceRegistry**. This ensures:
 
-- Entities are isolated to their respective dimensions.
+- Entities are isolated to their respective dimensions, enabling independent simulation domains.
+- Systems operate only on entities within the same dimension, ensuring consistency and scalability.
 
-- Systems operate only on entities within the same dimension.
+Dimension sharding is a core design goal of the engine, not just a future roadmap item. It allows the engine to scale to millions of entities while maintaining deterministic behavior. For more details, see the dimension documentation in `docs/engine/dimensions/overview.md`.
 
 ### PocketSystem Example
 
-The **PocketSystem** manages:
+The **PocketSystem** is a specialized system that manages the unique properties of pocket dimensions. It handles:
 
-- State for pocket dimensions, including time dilation and entry/exit effects.
+- **Pocket state management**: Tracks the lifecycle and properties of pocket dimensions.
+- **Time dilation effects**: Ensures that time flows differently within pockets, as defined by their physics profiles.
+- **Entry and exit synchronization**: Manages transitions of entities into and out of pocket dimensions, ensuring consistency with the **DimensionInstanceRegistry**.
 
-- Synchronization with the DimensionInstanceRegistry to ensure consistency.
-
-For more on dimensions, see `docs/engine/dimensions/overview.md`.
+This system is tightly integrated with the dimension-aware ECS shards, leveraging the registry to partition and synchronize state effectively. For more on pocket dimensions, refer to `docs/engine/dimensions/pocket.md`.
 
 ## How contexts can extend the ECS
 
@@ -72,7 +73,7 @@ Contexts (mods) may register new component schemas and systems. They should decl
    - Move to archetype-based storage for cache-efficient, fast iteration of common component combinations.
 
 3. Dimension-aware ECS shards
-   - Partition ECS state by dimension/shard to scale to millions of entities and isolate simulation domains.
+   - **Implemented**: Partition ECS state by dimension/shard to scale to millions of entities and isolate simulation domains.
 
 4. Hot-loading component schemas from Contexts
    - Allow Context manifests to introduce and update component schemas at runtime with validation and migration hooks.
