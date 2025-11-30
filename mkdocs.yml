@@ -96,6 +96,8 @@ nav:
               - Context Manifest Schema: contexts/fold/specs/context-manifest.md
               - Foldstone Capacity Model: contexts/fold/specs/foldstone-capacity.md
               - Wormhole Protocols: contexts/fold/specs/wormhole-protocol.md
+      - ARLS:
+          - About ARLS: contexts/ARLS/overview.md
   - Interfaces:
     - Interfaces Overview: interfaces/overview.md
     - Timekeeping Architecture: interfaces/timekeeping-architecture.md
